@@ -9,17 +9,17 @@ const navTemplate = (hasUser) => html`
 <a id="logo" href="/"><img id="logo-img" src="./images/logo.png" alt=""/></a>
 <nav>
     <div>
-    <a href="#">Dashboard</a>
-    <a href="#">Search</a>
+    <a href="/catalog">Dashboard</a>
+    <a href="/search">Search</a>
 </div>
 ${!hasUser ? html`
 <div class="guest">
   <a href="/login">Login</a>
-  <a href="#">Register</a>
+  <a href="/register">Register</a>
 </div>
 `: html`
 <div class="user">
-  <a href="#">Add Pair</a>
+  <a href="/create">Add Pair</a>
   <a @click=${onLogout} href="javascript:void(0)">Logout</a>
 </div>
 ` }

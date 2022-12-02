@@ -63,7 +63,7 @@ describe("E2E tests", function () {
       expect(isCalled()).to.be.false;
     });
 
-    it("Register makes correct API call [ 2.5 Points ]", async () => {
+    it.only("Register makes correct API call [ 2.5 Points ]", async () => {
       const data = mockData.users[0];
       const { post } = await handle(endpoints.register);
       const { onRequest } = post(data);
